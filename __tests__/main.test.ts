@@ -7,7 +7,7 @@
  */
 
 import * as core from '@actions/core'
-import {run} from '../src/main'
+import { run } from '../src/main'
 
 // Mock the action's main function
 //const runMock = jest.spyOn(main, 'run')
@@ -34,11 +34,9 @@ describe('When running the action', () => {
   })
 
   //const fakeSetOuput=core.setOutput as jest.MockedFunction<typeof core.setOutput>
-test('it should set the release-url output parameter', async () => {
-  await run()
+  test('it should set the release-url output parameter', async () => {
+    await run()
 
-  expect(setOutputMock).toHaveBeenCalledWith('release-url', expect.anything())
-})
-
-
+    expect(setOutputMock).toHaveBeenCalledWith('release-url', expect.anything())
+  })
 })
