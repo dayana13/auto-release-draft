@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - custon-js-action
 
 jobs:
   build:
