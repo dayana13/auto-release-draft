@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - custon-js-action
+      - custom-js-action
 
 jobs:
   build:
