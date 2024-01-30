@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Tests
+    runs-on: $ {{ matrix.os }}
+    strategy:
+      matrix: 
+        os: [windows-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        id: npm-ci
+        run: npm ci
+
+      - name: Build
+        id: build
+        run: npm run all
+
+ 
