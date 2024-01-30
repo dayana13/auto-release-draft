@@ -8,11 +8,8 @@ on:
 jobs:
   build:
     name: Build and Tests
-    runs-on: $ {{ matrix.os }}
-    strategy:
-      matrix: 
-        os: [windows-latest, ubuntu-latest]
-
+    runs-on: ubuntu-latest
+   
     steps:
       - name: Checkout
         id: checkout
