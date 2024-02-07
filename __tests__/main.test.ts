@@ -7,7 +7,7 @@
  */
 
 import * as core from '@actions/core'
-import { run } from '../src/main'
+import {run} from '../src/main'
 
 // Mock the action's main function
 //const runMock = jest.spyOn(main, 'run')
