@@ -13,8 +13,8 @@ export async function createReleaseDraft(
   const {owner, repo} = github.context.repo
 
   const release = await octokit.rest.repos.createRelease({
-    owner: owner,
-    repo: repo,
+    owner,
+    repo,
     tag_name: versionTag,
     name: version.removePrefix(changeLog),
     body: markdown.toUnorderedList(changeLog),
@@ -22,7 +22,7 @@ export async function createReleaseDraft(
     prerelease: version.isPrerelease(versionTag)
   })
 
-  if (release.status != 201) {
+  if (release.status !== 201) {
     throw new Error(`Failed to create the release: ${release.status}`)
   }
 
