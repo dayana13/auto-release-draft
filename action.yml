@@ -1,23 +1,17 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: 'heart'
-  color: 'red'
+name: 'Auto Release Draft'
+description: 'Draft a Github release with the changes introduced by newly created tag'
+author: 'Dayana Myk'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
-    required: true
-    default: '1000'
+ repo-token:
+  description: 'The GITHUB_TOKEN used to authenticate to the current '
+  required: true
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  release-url:
+    description: 'The URL of the Github release that was crafted'
 
 runs:
   using: node20
