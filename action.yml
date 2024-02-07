@@ -2,13 +2,11 @@ name: 'Auto Release Draft'
 description: 'Draft a Github release with the changes introduced by newly created tag'
 author: 'Dayana Myk'
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: 'heart'
-  color: 'red'
-
 # Define your inputs here.
-
+inputs:
+ repo-token:
+  description: 'The GITHUB_TOKEN used to authenticate to the current '
+  required: true
 
 # Define your outputs here.
 outputs:
